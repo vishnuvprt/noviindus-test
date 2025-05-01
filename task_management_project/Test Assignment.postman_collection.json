@@ -1,0 +1,226 @@
+{
+	"info": {
+		"_postman_id": "16657098-5137-4ec5-a795-1be3b8ae3c10",
+		"name": "Test Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "39924616"
+	},
+	"item": [
+		{
+			"name": "login",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2MTA3MDQ1LCJpYXQiOjE3NDYxMDM0NDUsImp0aSI6IjQ0YzMyN2I5ZGVkYjQ4NTA4MGNhNDdhODY2ZmYyNTA3IiwidXNlcl9pZCI6Mn0.iw10dWcqYd1W6ATq-A4bLFzCe0B9w2xnDEkCFdFYmXg"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"admin\",\n  \"password\": \"pass@1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/accounts/"
+			},
+			"response": []
+		},
+		{
+			"name": "token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2MDg3NjcyLCJpYXQiOjE3NDYwODQwNzIsImp0aSI6IjVkOGEyNzYyZWU3YjRiNjI4NGI4MGQ4ZTE0ZjNmMTBhIiwidXNlcl9pZCI6MX0.ZjciHb7prcSxZrORRjyNS5C4TCSEmWv4IYO2RlRfbv0"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"johndoe\",\n  \"password\": \"pass@1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/token/"
+			},
+			"response": []
+		},
+		{
+			"name": "create-user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2MDkxMzIwLCJpYXQiOjE3NDYwODc3MjAsImp0aSI6ImJjMTMwN2ZjZDdlZjQzNjM5NzU0MDdkZjdjNzVlYWU2IiwidXNlcl9pZCI6MX0.I37iaIw-NdFBAXN1iL9fd3ml-hnbYZTctjjCQL8G52o"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"john_doe\",\n  \"email\": \"john@example.com\",\n  \"first_name\": \"John\",\n  \"last_name\": \"Doe\",\n  \"role\": \"user\",\n  \"password\": \"pass@1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/accounts/users/"
+			},
+			"response": []
+		},
+		{
+			"name": "list-users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2MTA2ODQxLCJpYXQiOjE3NDYxMDMyNDEsImp0aSI6Ijg5YjBiNjk1MjQ1NzRlOGI4MWRjZTIxZTQyYmVmZDVlIiwidXNlcl9pZCI6MX0.Nb0y2BEsny8KjHlqq1LfLhmpeKIx5F3lBJFEV8DsYac"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/accounts/users/"
+			},
+			"response": []
+		},
+		{
+			"name": "update-user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2MTA2ODQxLCJpYXQiOjE3NDYxMDMyNDEsImp0aSI6Ijg5YjBiNjk1MjQ1NzRlOGI4MWRjZTIxZTQyYmVmZDVlIiwidXNlcl9pZCI6MX0.Nb0y2BEsny8KjHlqq1LfLhmpeKIx5F3lBJFEV8DsYac"
+					}
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 2,\n    \"username\": \"johndoe\",\n    \"email\": \"john@example.com\",\n    \"first_name\": \"John\",\n    \"last_name\": \"Doe\",\n    \"role\": \"user\",\n    \"managed_by\": null,\n    \"is_active\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/accounts/users/2/"
+			},
+			"response": []
+		},
+		{
+			"name": "task-list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2MTA4NjIyLCJpYXQiOjE3NDYxMDUwMjIsImp0aSI6ImMwOGM3ZDA1ZGI4NDQwNTZiYWEzYmE3ZDJmZjU2MWJhIiwidXNlcl9pZCI6Mn0.QYw1g8ttFXUn9NzM72QHjDKUGYg45AGFwggGFNjrLuA"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/tasks/"
+			},
+			"response": []
+		},
+		{
+			"name": "create-task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2MTA3NTkyLCJpYXQiOjE3NDYxMDM5OTIsImp0aSI6ImI3M2FjYWQ0M2UwMzQzYjNiMzE0NTRmNDIxMTEwYzY1IiwidXNlcl9pZCI6MX0.JJtefMUWAqE32a7olwtMxmkxAIhc_cOeA8GZx6DgMpc"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"\",\n  \"description\": \"Test description\",\n  \"assigned_to\": \"\",\n  \"due_date\": \"2025-05-10\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/tasks/"
+			},
+			"response": []
+		},
+		{
+			"name": "update-task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2MTEwMjgzLCJpYXQiOjE3NDYxMDY2ODMsImp0aSI6IjQyMWE1ODBhNjU3NjRlMzg4NWQ0MTU3OTJmMjFmYjA3IiwidXNlcl9pZCI6M30.HtlBRcag6xLHXb2Ee_qaIstaSLOJyi4zORivLltAxvA"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Test task 1\",\n  \"description\": \"Test description\",\n  \"assigned_to\": 2,\n  \"due_date\": \"2025-05-10\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/tasks/2/"
+			},
+			"response": []
+		},
+		{
+			"name": "update-status",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2MTA5MTY1LCJpYXQiOjE3NDYxMDU1NjUsImp0aSI6IjIzYTliNDczYjQ1ZTQ3MTNiMWRhYzM0OGEzY2NjMjMxIiwidXNlcl9pZCI6Mn0.AyABbtCF5Y03KKoZsc3yDDUeHxtSTqLrm1NRMUSZZPo"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"status\": \"completed\",\n  \"completion_report\":\"Test report\",\n  \"worked_hours\":6\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/tasks/1/complete/"
+			},
+			"response": []
+		},
+		{
+			"name": "task-report",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2MTA5MTY1LCJpYXQiOjE3NDYxMDU1NjUsImp0aSI6IjIzYTliNDczYjQ1ZTQ3MTNiMWRhYzM0OGEzY2NjMjMxIiwidXNlcl9pZCI6Mn0.AyABbtCF5Y03KKoZsc3yDDUeHxtSTqLrm1NRMUSZZPo"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/tasks/1/report/"
+			},
+			"response": []
+		}
+	]
+}
